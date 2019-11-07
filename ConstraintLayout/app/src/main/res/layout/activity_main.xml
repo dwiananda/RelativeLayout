@@ -6,13 +6,90 @@
 	android:layout_height="match_parent"
 	tools:context=".MainActivity">
 
+	<androidx.constraintlayout.widget.Guideline
+		android:id="@+id/guideline1"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		app:layout_constraintGuide_begin="365dp" />
+
+	<LinearLayout
+		android:id="@+id/linearLayout"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical"
+		android:weightSum="2">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:layout_weight="1"
+			android:background="#FFFF8080"
+			android:orientation="vertical"></LinearLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:layout_weight="1"
+			android:background="#FF808080"
+			android:orientation="vertical"/>
+	</LinearLayout>
+
 	<TextView
+		android:id="@+id/textView2"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:text="Hello World!"
+		android:textColor="#000000"
 		app:layout_constraintBottom_toBottomOf="parent"
 		app:layout_constraintLeft_toLeftOf="parent"
 		app:layout_constraintRight_toRightOf="parent"
-		app:layout_constraintTop_toTopOf="parent" />
+		app:layout_constraintTop_toTopOf="parent"
+		app:layout_constraintVertical_bias="0.432" />
+
+	<TextView
+		android:id="@+id/textView"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="15dp"
+		android:text="My Name Dwi"
+		android:textColor="#000000"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+	<RelativeLayout
+		android:id="@+id/relativeLayout"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_marginTop="650dp"
+		android:layout_marginLeft="150dp">
+
+		<CheckBox
+			android:id="@+id/checkBox"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Im Not Robot" />
+	</RelativeLayout>
+
+	<Button
+		android:id="@+id/follow"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="Follow"
+		app:layout_constraintBottom_toBottomOf="@+id/relativeLayout"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent" />
+
+	<TextView
+		android:id="@+id/textView4"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="200dp"
+		android:text="Click the button to be friend"
+		app:layout_constraintBottom_toTopOf="@+id/follow"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/textView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
